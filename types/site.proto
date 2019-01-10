@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package types;
+
+option go_package = "github.com/dchenk/ww-admin/types";
+
+// A Site contains the basic details needed to determine a site's ID for media storage
+// and table prefix in the main database.
+message Site {
+	// Domain is the site's domain name.
+	string domain = 1;
+
+	// ID is the site's unique ID in the sites table.
+	uint32 id = 2;
+
+	// Prefix is the two-letter string included in the site's prefix for database tables.
+	string prefix = 3;
+}
